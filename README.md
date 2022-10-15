@@ -509,3 +509,63 @@ df = pd.DataFrame({'l1':l1,
                    'l8':l8,
                    'l9':l9,
     })
+    
+    
+Q36.
+
+Step 1: Create a NumPy Array
+import numpy as np
+
+my_array = np.array([[11,22,33],[44,55,66]])
+
+print(my_array)
+print(type(my_array))
+
+
+Step 2: Convert the NumPy Array to Pandas DataFrame
+import numpy as np
+import pandas as pd
+
+my_array = np.array([[11,22,33],[44,55,66]])
+
+df = pd.DataFrame(my_array, columns = ['Column_A','Column_B','Column_C'])
+
+print(df)
+print(type(df))
+
+Step 3 (optional): Add an Index to the DataFrame
+
+to add index = ['Item_1', 'Item_2']
+
+import numpy as np
+import pandas as pd
+
+my_array = np.array([[11,22,33],[44,55,66]])
+
+df = pd.DataFrame(my_array, columns = ['Column_A','Column_B','Column_C'], index = ['Item_1', 'Item_2'])
+
+print(df)
+print(type(df))
+
+Array Contains a Mix of Strings and Numeric Data
+
+import numpy as np
+
+my_array = np.array([['Jon',25,1995,2016],['Maria',47,1973,2000],['Bill',38,1982,2005]], dtype=object)
+
+print(my_array)
+print(type(my_array))
+print(my_array.dtype)
+
+import numpy as np
+import pandas as pd
+
+my_array = np.array([['Jon',25,1995,2016],['Maria',47,1973,2000],['Bill',38,1982,2005]], dtype=object)
+
+df = pd.DataFrame(my_array, columns = ['Name','Age','Birth Year','Graduation Year'])
+
+print(df)
+print(type(df))
+
+
+
